@@ -99,6 +99,13 @@
    \resetfontdimens}}
 \makeatother
 
+%Si Einheiten
+\usepackage{siunitx}
+
+%c++ Code einbinden
+\usepackage{listings}
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
+
 
 \begin{document}
 
@@ -150,19 +157,102 @@ Praktikant: &  Michael Lohmann\\
 
 \section{Einleitung}
 \label{sec:einleitung}
-In diesem Versuch haben wir uns mit zwei wichtigen Eigenschaften von Flüssigkeiten beschäftigt: 
-\begin{itemize}
- \item Kapillareffekt: hervorgerufen durch Adhäsion und Kohäsion
- \item Viskosität: die Fließfähigkeit
-\end{itemize}
-
-Kapillareffekt ist eine Eigenschaft aller Flüssigkeiten. Er beruht auf der Adhäsion und Kohäsion. Eine weitere wichtige Eigenschaft von Flüssigkeiten ist 
+In diesem Versuch sollen folgende Effekte untersucht werden:
+Kapillarität, die bei der Wechselwirkung zwischen Flüssigkeiten und Oberflächen auftritt. Viskosität, die innere Reibung eines Fluids.\\
+Diese beiden Phänomene spielen im alltäglichen Leben eine große Rolle und sind deshalb besonders untersuchenswert.
+Pflanzen transportieren Wasser und darin enthaltene Nährstoffe durch Kapillarwirkung von den Wurzeln nach oben in die Blätter.\\
+\textbf{Satz zur Viskosität}
 
 \section{Theorie}
 \label{sec:theorie}
-                                                                                                                                                                      
+\subsection{Kapillarität}
+Zwischen Molekülen wirken \textit{Dipolkräfte} und \textit{Van-der-Waals-Kräfte}. WARUM??? Die in diesem Versuch verwendeten Flüssigkeiten\\
+BILD\\
+An der Oberfläche einer Flüssigkeit wirken also nur die Kräfte \textbf{rein} in die Flüssigkeit, während in der Flüssigkeit auf ein Molekül Kräfte von allen Seiten wirken und sich so ausgleichen.\\
+Man unterscheidet zwischen \textit{Kohäsion}, Kräfte zwischen gleichartigen Molekülen, und \textit{Adhäsion}, Kräfte, die an Grenzschichten auftreten.\\
+Die in diesem Versuch verwendeten...\\
+
+Die Oberflächenspannung einer Flüssigkeit $\sigma$ ist durch den Energiegewinn $dW$ definiert, der sich ergibt wenn sie eine Oberfläche $dA$ benetzt: $ \sigma=\frac{dW}{dA}$\\
+Ist eine Kapillare mit Radius $r$ und eine Flüssigkeit mit der Oberflächenspannung $\sigma$ und der Dichte $\rho$ gegeben, so wird diese in der Kapillare um $h$ ansteigen, da sie durch das Benetzen Energie gewinnt.
+Diese wird in potentielle Energie umgewandelt.
+Es gilt also:
+$$ \sigma\cdot A=mgh$$
+Dabei ist $A=2\pi~r \cdot h$ und $m=\rho \pi ~ r^2 \cdot h$.
+Für die Steighöhe $h$ folgt also:
+\begin{align}
+	h = \frac{2\sigma}{\rho~g~r}
+\end{align}
+
+\subsubsection{Mohrsche Waage}
+Mit der Mohrschen Waage kann man die Dichte einer Flüssigkeit bestimmen.
+Sie beruht auf dem \textit{archimedische Prinzip}, welches besagt, dass die Auftriebskraft eines Körpers so groß ist, wie die Gewichtskraft der verdrängten Flüssigkeit.\\
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[scale=0.7]{MohrscheWaage.png}
+	\caption{Mohrsche Waage \cite{lp}}
+	\label{fig:MohrscheWaage}
+\end{figure}
+Zuerst wird die Waage außerhalb der Flüssigkeit so eingestellt, dass sie sich in der Gleichgewichtslage befindet.
+Dann taucht man den Probekörper in die Flüssigkeit, deren Dichte bestimmt werden soll.
+Aufgrund der Auftriebskraft beginnt der Körper zu steigen.
+Deshalb hängt man an die Hebelarmseite des Probekörpers kleine Gewichte verschiedener Massen und in unterschiedlichem Abstand zum Drehpunkt, sodass die Gleichgewichtslage wiederhergestellt wird.
+Das von diesen Gewichten verursachte Drehmoment entspricht dem Drehmoment der Auftriebskraft.
+Wenn man das Volumen des Probekörpers nicht kennt, muss zuerst Wasser als Referenz genommen werden ($\rho_{H_2O}\approx 1~ \si{\gram/\centi \meter ^3}$).\\
+FORMEL???
+
+\subsection{Viskosität}
+Viskosität ist ein Maß dafür, wie zähflüssig eine Flüssigkeit ist, also wie stark die innere Reibung ist.\\
+Man unterscheidet zwei Fälle von Strömungen, wenn ein Körper von einem anderen Medium  umflossen wird:
+\begin{itemize}
+	\item \textit{laminare} Strömung: Das Fluid strömt in Schichten, die sich nicht miteinander vermischen. %wikipedia
+	\item \textit{turbulente} Strömung: Es kommt zu Verwirbelungen. Die Beschreibung dieser ist sehr komplex, soll hier aber nicht näher betrachtet werden.
+\end{itemize}
+Die Reynoldszahl $Re$ ist ein Maß für den Übergang von laminarer zu turbulenter Strömung.
+Sie ist so definiert:
+\begin{align}
+	Re=\frac{\rho~v~d}{\eta}
+\end{align}
+
+Bewegungsgleichung von Flüssigkeiten unter innerer Reibung:
+\begin{align}
+	F=\eta~ A\frac{dv}{dr}
+\end{align}
+in einem Rohr:
+\begin{align}
+	F=\eta~ 2\pi r\frac{dv}{dr}
+\end{align}
+Setzt man diese Kraft gleich der Druckkraft $F_p=\pi r^2 \cdot (p_1-p_2)$ kann das \textit{Hagen-Poiseuille Gesetz} der laminaren Rohrströmung hergeleitet werden.\footnote{\cite{gerthsen} S.125} % hier muss noch ergänzt werden
+\begin{align}
+	\dot{V}=\frac{\pi(p_1-p_2)}{8\eta l}r^4
+\end{align}
+
 \section{Durchführung}
 \label{sec:durchfuehrung}
+Zuerst werden die Durchmesser der 3 verschiedenen Kapillaren jeweils dreimal mit dem Messmikroskop vermessen. Dabei wird die Kapillare fokussiert, dann der linke oder rechte Rand anvisiert. Die Stellung des ??? wird abgelesen, bevor man die gegenüberliegende Seite anvisiert und erneut die ??? abliest. Aus der Differenz der beiden ergibt sich der Durchmesser der Kapillare.
+
+\subsection{Kapillarität}
+Man reinigt die Kapillaren gründlich mit Lösungsmittel und destilliertem Wasser, bevor man sie mit der Wasserstrahlpumpe trocknet.
+Dieser Vorgang muss später nach jeder Flüssigkeit wiederholt werden.\\
+Nun füllt man sich die drei auf Oberflächenspannung zu untersuchende Flüssigkeiten destilliertes Wasser, Methanol und Ethylenglykol in einen Becher ab.
+Mithilfe der Mohrschen Waage (Abb. \ref{fig:MohrscheWaage}) bestimmt man die jeweilige Dichte.
+Dabei ist darauf zu achten, dass der Probekörper sauber ist und ganz in die Flüssigkeit eintaucht.\\
+Dann misst man für jede der drei Flüssigkeiten und für jede der drei Kapillaren jeweils dreimal den Höhenunterschied $h_{Kap}$ der Flüssigkeitspegel, der sich ergibt, wenn man die Kapillare in die Flüssigkeit taucht und anschließend bis zur Oberfläche herauszieht.\\
+Anschließend werden Methanol und Ethylenglykol in spezielle Behälter gegossen und somit vorschriftsmäßig entsorgt. Nun müssen alle Gefäße und die Kapillaren gereinigt werden.
+
+\subsection{Innere Reibung}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[scale=0.7]{ViskoAufbau.png}
+	\caption{Versuchsaufbau zur Messung der Viskosität \cite{lp}}
+	\label{fig:Visko}
+\end{figure}
+Zuerst misst man den Durchmesser des Glasgefäßes und den Abstand der Strichmarken 50 und 45 von diesem, die Länge der Kapillaren und die Temperatur des destillierten Wassers.
+Dann befestigt man eine der Kapillaren am Auslaufstutzen des Gefäßes, hält die Öffnung zu und befüllt alles mit destillierten Wasser bis zur Strichmarke 50.
+Es wird die Ausflusszeit bis zum Erreichen der Strichmarke 45 gemessen.
+Dabei ist das ausfließende Wasser in einem Gefäß aufzufangen und wiederzuverwenden.
+Diesen Vorgang wiederholt man auch für die anderen beiden Kapillaren.\\
+Nun wählt man die Kapillare mit dem kleinsten Durchmesser und misst zu dieser während des Ausflusses die Zeit in Abhängigkeit der Höhe der Wassersäule.\\
+Abschließend muss alles gesäubert werden und die Arbeitsfläche trocken gewischt werden.
 
 \section{Auswertung}
 \label{sec:auswertung}
@@ -217,6 +307,19 @@ Wobei $h$ die Steighöhe im Kapillar mit dem Radius $r$ der Flüssigkeit mit der
 \label{sec:diskussion}
 Aufgrund von fehlender Zeit schafften wir es leider nicht, die Messung der Ausflusszeit des mittleren Kapillars zu bestimmen.
 Da wir jedoch die Messungen des kleinen und großen Kapillars durchführen konnten, haben wir wenigstens einen Eindruck, wie die Kapillardicke mit der Ausflussgeschwindigkeit zusammenhängt.
+
+\section{Anhang}
+\begin{thebibliography}{9}
+
+\bibitem{lp} 
+	\emph{Lehrportal der Universität Göttingen, Kapillarität und Viskosität},
+  https://lp.uni-goettingen.de/get/text/3638, abgerufen 22.06.14 18:32 Uhr
+
+\bibitem{gerthsen}
+	\textsc{Dieter Meschede} (2010): \emph{Gerthsen Physik}, 24. Auflage, Springer Heidelberg
+Dordrecht London New York
+
+\end{thebibliography}
 
 
 \end{document}
