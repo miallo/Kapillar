@@ -169,13 +169,13 @@ So ist der Asphalt der Straßen nicht fest, sondern nur sehr zähflüssig und ka
 \subsection{Kapillarität}
 Zwischen Molekülen wirken \textit{Dipolkräfte} und \textit{Van-der-Waals-Kräfte}.
 Van-der-Waals-Kräfte bilden sich vor allem bei langkettigen Molekülen aus, die polarisierbar sind.
-Wird dann durch die statistische Bewegung der Elektronen für eine kurze Zeit ein Dipol ausgebildet, kann dieser per Influenz ein nahegelegenes Molekül ebenfalls polarisieren und zieht dieses an.\\
-Die in diesem Versuch verwendeten Flüssigkeiten\\
-BILD\\
-An der Oberfläche einer Flüssigkeit wirken also nur die Kräfte ins \textbf{innere} der Flüssigkeit, während in der Flüssigkeit auf ein Molekül Kräfte von allen Seiten wirken und sich so ausgleichen.\\
-Man unterscheidet zwischen \textit{Kohäsion}, Kräfte zwischen gleichartigen Molekülen, und \textit{Adhäsion}, Kräfte, die an Grenzschichten auftreten.\\
-Die in diesem Versuch verwendeten...\\
-
+Wird dann durch die statistische Bewegung der Elektronen für eine kurze Zeit ein Dipol ausgebildet, kann dieser per Influenz ein nahegelegenes Molekül ebenfalls polarisieren und zieht dieses an.
+\begin{figure}[!h]
+ \centering
+ \includegraphics[width=0.5\linewidth]{Oberflaechenspannung.png}
+ \caption{Modell zur Oberflächenspannung aus \cite[S. 198]{gerthsen} }
+\end{figure}
+An der Oberfläche einer Flüssigkeit wirken also nur die Kräfte ins Innere der Flüssigkeit, während in der Flüssigkeit auf ein Molekül Kräfte von allen Seiten wirken und sich so ausgleichen.\\
 Die Oberflächenspannung einer Flüssigkeit $\sigma$ ist durch den Energiegewinn $dW$ definiert, der sich ergibt wenn sie eine Oberfläche $dA$ benetzt: $ \sigma=\frac{dW}{dA}$\\
 Ist eine Kapillare mit Radius $r$ und eine Flüssigkeit mit der Oberflächenspannung $\sigma$ und der Dichte $\rho$ gegeben, so wird diese in der Kapillare um $h$ ansteigen, da sie durch das Benetzen Energie gewinnt.
 Diese wird in potentielle Energie umgewandelt.
@@ -186,6 +186,12 @@ Für die Steighöhe $h$ folgt also:
 \begin{align}
 	h = \frac{2\sigma}{\rho~g~r}
 \end{align}
+oder für die Oberflächenspannung $\sigma$
+\begin{align}
+ \sigma =\frac{1}{2}h~\rho~g~r \label{eq:oberfl}
+\end{align}
+Man unterscheidet zwischen \textit{Kohäsion}, Kräfte zwischen gleichartigen Molekülen, und \textit{Adhäsion}, Kräfte, die an Grenzschichten auftreten.\\
+
 
 \subsubsection{Mohrsche Waage}
 Mit der Mohrschen Waage kann man die Dichte einer Flüssigkeit bestimmen.
@@ -201,9 +207,12 @@ Dann taucht man den Probekörper in die Flüssigkeit, deren Dichte bestimmt werd
 Aufgrund der Auftriebskraft beginnt der Körper zu steigen.
 Deshalb hängt man an die Hebelarmseite des Probekörpers kleine Gewichte verschiedener Massen und in unterschiedlichem Abstand zum Drehpunkt, sodass die Gleichgewichtslage wiederhergestellt wird.
 Das von diesen Gewichten verursachte Drehmoment entspricht dem Drehmoment der Auftriebskraft.
-Wenn man das Volumen des Probekörpers nicht kennt, muss zuerst Wasser als Referenz genommen werden ($\rho_{H_2O}\approx 0.997~ \si{\gram/\centi \meter ^3}$).\\
-FORMEL???
-
+Wenn man das Volumen des Probekörpers nicht kennt, muss zuerst Wasser als Referenz genommen werden.\\
+\begin{align}
+\rho_F=\frac{\sum\limits_{i=1}^nm_{F,i}\cdot r_{F,i}}{\sum\limits_{i=1}^nm_{W,i}\cdot r_{W,i}}\cdot\rho_W
+\end{align}
+Dabei ist $m_{F,i}$ die i-te Masse der Flüssigkeit F, welche im Abstand $r_{F,i}$ angehängt wurde.
+$\rho_W$ bezeichnet hierbei die Dichte von Wasser, die   $\rho_W\approx 997~\si{\kilo\gram/\meter^3}$ beträgt \cite[S. 258]{gerthsen}.
 \subsection{Viskosität}
 Viskosität ist ein Maß dafür, wie zähflüssig eine Flüssigkeit ist, also wie stark die innere Reibung ist.\\
 Man unterscheidet zwei Fälle von Strömungen, wenn ein Körper von einem anderen Medium  umflossen wird:
@@ -225,7 +234,7 @@ in einem Rohr:
 \begin{align}
 	F=\eta~ 2\pi r\frac{dv}{dr}
 \end{align}
-Setzt man diese Kraft gleich der Druckkraft $F_p=\pi r^2 \cdot (p_1-p_2)$ kann das \textit{Hagen-Poiseuille Gesetz} der laminaren Rohrströmung hergeleitet werden.\footnote{\cite{gerthsen} S.125} % hier muss noch ergänzt werden
+Setzt man diese Kraft gleich der Druckkraft $F_p=\pi r^2 \cdot (p_1-p_2)$ kann das \textit{Hagen-Poiseuille Gesetz} der laminaren Rohrströmung hergeleitet werden.\cite[S.125]{gerthsen} % hier muss noch ergänzt werden
 \begin{align}
 	\dot{V}=\frac{\pi(p_1-p_2)}{8\eta l}r^4
 \end{align}
@@ -268,11 +277,7 @@ Abschließend muss alles gesäubert werden und die Arbeitsfläche trocken gewisc
 Um die Dichte von Methylalkohol und Ethylenglykol zu bestimmen, wurde die Moor'sche Waage verwendet.
 Sie basiert auf dem archimedischen Prinzip und misst über den Auftrieb, den ein (bekannter) Körper in einer unbekannten Flüssigkeit erfährt, deren Dichte.
 Sie ist so konzipiert, dass die Dichte einer unbekannten Flüssigkeit sich so errechnet:
-\begin{align}
-\rho_F=\frac{\sum\limits_{i=1}^nm_{F,i}\cdot r_{F,i}}{\sum\limits_{i=1}^nm_{W,i}\cdot r_{W,i}}\cdot\rho_W
-\end{align}
-Dabei ist $m_{F,i}$ die i-te Masse der Flüssigkeit F, welche im Abstand $r_{F,i}$ angehängt wurde.
-$\rho_W$ bezeichnet hierbei die Dichte von Wasser, die nach Gerthsen \cite{gerthsen} $997$ kg/m$^3$ beträgt.
+
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
