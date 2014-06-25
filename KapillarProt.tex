@@ -287,61 +287,64 @@ Um die Dichte von Methylalkohol und Ethylenglykol zu bestimmen, wurde die Mohr's
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
-\hline Aufhängung einzelner Gewichte & 5000mg & 500mg & 50mg &Dichte [kg/$m^3$]\\
+\hline Aufhängung einzelner Gewichte & 5000mg & 500mg & 50mg &Dichte [kg/m$^3$]\\
 \hline Dest. Wasser  & 10	&	& 1	& 997	\\
 \hline Äthylenglykol & 10	& 9	& 3	& 1088	\\
 \hline Methylalkohol & 8	& 4	& 	& 837	\\\hline
 \end{tabular}
 \caption{Position der einzelnen Gewichte an der Moor'schen Waage in Skalenteilen bei den unterschiedlichen Flüssigkeiten\label{tab:dichte}}
 \end{table}
-Die Literaturwerte nach \cite{Formelsammlung} (S. 130-131) lauten für Ethylenglykol 1113kg/m$^3$ und für Methanol 790kg/m$^3$.
+Die Literaturwerte nach \cite[S. 130-131]{Formelsammlung} lauten für Ethylenglykol 1113kg/m$^3$ und für Methanol 790kg/m$^3$.
 \subsection{Oberflächenspannung}
+Die Fehler der Oberflächenspannung nach Formel \eqref{eq:oberfl} berechnen sich nach
+\begin{align*}
+\sigma_{\sigma}=\frac{g}{2} \cdot \sqrt{h^{2} \cdot r^{2} \cdot \sigma_{\rho}^{2} + h^{2} \cdot \rho^{2} \cdot \sigma_{r}^{2} + r^{2} \cdot \rho^{2} \cdot \sigma_{h}^{2}}
+\end{align*}
 \begin{table}[!h]
 \centering
 \begin{tabular}{|l|l|c|c|}
 \hline
-Flüssigkeit 		&Kapillar & m. Steighöhe [cm]	& Oberflächenspannung [N/m]\\\hline\hline
-			&grün	& $1.45\pm 0.04$		&$ 1.309 \pm 0.035 $\\
-Destiliertes Wasser	&blau	& $2.327\pm 0.035$		&$ 1.418 \pm 0.027 $\\
-            &braun  & $3.23\pm 0.04$		&$ 1.412 \pm 0.035 $\\\hline
-			&grün	& $0.85\pm 0.04$		&$ 0.84 \pm 0.04 $\\
-Ethylenglykol		&blau	& $1.383\pm 0.022$		&$ 0.920 \pm 0.018 $\\
-			&braun	& $1.98\pm 0.06$		&$ 0.945 \pm 0.034 $\\\hline
-			&grün	& $0.517\pm 0.022$		&$ 0.392 \pm 0.017 $\\
-Methylalkohol		&blau	& $0.98\pm 0.10$		&$ 0.50 \pm 0.05 $\\
-			&braun	& $1.33\pm 0.04$		&$ 0.489 \pm 0.019 $\\
+Flüssigkeit 	     &Kapillar 	& m. Steighöhe [cm]		& Oberflächenspannung [N/m]\\\hline\hline
+								&grün	& $1.45\pm 0.04$		&$ 0.0642 \pm 0.0017 $\\
+Destiliertes Wasser	&blau	& $2.327\pm 0.035$	&$ 0.0696 \pm 0.0013 $\\
+            					&braun	& $3.23\pm 0.04$		&$ 0.0693 \pm 0.0017 $\\\hline
+								&grün	& $0.85\pm 0.04$		&$ 0.0411 \pm 0.0019 $\\
+Ethylenglykol			&blau	& $1.383\pm 0.022$	&$ 0.0451 \pm 0.0009 $\\
+								&braun	& $1.98\pm 0.06$		&$ 0.0464 \pm 0.0017 $\\\hline
+								&grün	& $0.517\pm 0.022$	&$ 0.0192 \pm 0.0008 $\\
+Methylalkohol			&blau	& $0.98\pm 0.10$		&$ 0.0247 \pm 0.0024 $\\
+								&braun	& $1.33\pm 0.04$		&$ 0.0240 \pm 0.0009 $\\
 \hline
 \end{tabular}
-\caption{Steighöhe unterschiedlicher Flüssigkeiten in unterschiedlichen Kapillaren}
+\caption{Steighöhe unterschiedlicher Flüssigkeiten in unterschiedlichen Kapillaren und die sich daraus ergebende Oberflächenspannung}
 \end{table}
+Damit kann man mithilfe des gewichteten Mittelwertes die Werte aus Tab. \ref{tab:sigma} errechnen.\\
+
 \begin{table}[!h]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c||c|c|c|}
 \hline
-$\sigma$ & Gew. Mittelwert [\si{\newton/\meter}] 	& Literaturwert [\si{\newton/\meter}] & Abweichung\\\hline\hline
-dest. Wasser & $ 0.0681 \pm 0.0009 $			&	$0.07275$&	7\%	\\\hline 
-Ethylenglykol & $ 0.0448 \pm 0.0007 $ 			&	$0.0484$	&	8\%	\\\hline 
-Methanol & $ 0.0215 \pm 0.0006 $				&	$0.0226$	&	5\%	\\ 
+$\sigma$ 		& Gew. Mittelwert [\si{\newton/\meter}]	& Literaturwert [\si{\newton/\meter}]	& Abweichung\\\hline\hline
+dest. Wasser 	& $ 0.0681 \pm 0.0009 $						&$0.07275$											&7\%	\\\hline 
+Ethylenglykol 	& $ 0.0448 \pm 0.0007 $ 						&$0.0484$											&8\%	\\\hline 
+Methanol 			& $ 0.0215 \pm 0.0006 $						&$0.0226$											&5\%	\\ 
 \hline 
 \end{tabular} 
-\caption{Oberflächenspannung der drei Flüssigkeiten und der Literaturwert nach QUELLLEEEEEEEEEEEEEEEEEEEEEEEEEEE}
+\caption{Oberflächenspannung der drei Flüssigkeiten und der Literaturwert nach \protect\footnotemark\label{tab:sigma}}
 \end{table}
-Daraus lässt sich die Oberflächenspannung der drei Flüssigkeiten bestimmen.
-Sie berechnet sich aus der Formel
-\begin{align}
-\sigma=\frac{1}{2}h\rho\cdot g r
-\end{align} 
-Wobei $h$ die Steighöhe im Kapillar mit dem Radius $r$ der Flüssigkeit mit der Dichte $\rho$ ist und g die Erdbeschleunigung.
-
+\footnotetext{http://de.wikipedia.org/wiki/Oberflächenspannung}
 \subsection{Viskosität}
 \begin{figure}
 \centering
 \include{Viskositaet}
 \end{figure}
+
+
+
 \section{Diskussion}
 \label{sec:diskussion}
 Aufgrund von fehlender Zeit schafften wir es leider nicht, die Messung der Ausflusszeit des mittleren Kapillars zu bestimmen.
-Da wir jedoch die Messungen des kleinen und großen Kapillars durchführen konnten, haben wir wenigstens einen Eindruck, wie die Kapillardicke mit der Ausflussgeschwindigkeit zusammenhängt.
+Da wir jedoch die Messungen des kleinen und großen Kapillars durchführen konnten, haben wir wenigstens einen Eindruck bekommen, wie die Kapillardicke mit der Ausflussgeschwindigkeit zusammenhängt.
 
 \section{Anhang}
 \begin{thebibliography}{9}
