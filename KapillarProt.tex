@@ -353,8 +353,20 @@ Diese haben wir nach der Formel
 \end{align}
 berechnet und deren Fehler ergaben sich durch
 \begin{align}
-a 
+ \sigma_{\eta}=\frac{\pi r^{3}}{8  dV^{2} l^{2}} \sqrt{ dV^{2} l^{2} \left(16 \Delta p^{2} dt^{2} \sigma_{r}^{2} + \Delta p^{2} r^{2} \sigma_{dt}^{2} + dt^{2} r^{2} \sigma_{\Delta p}^{2}\right) +\Delta p^{2}r^{2}dt^{2} \left(dV^{2}   \sigma_{l}^{2} + l^{2} \sigma_{dV}^{2}\right)}\label{eq:sigmaeta}
 \end{align}
+wodurch wir für die beidem Messreihen die Ergebnisse der Tabelle \ref{tbl:viskozeit} erhielten
+\begin{table}[!h]
+ \centering
+ \begin{tabular}{|c|c|c|}
+  \hline
+  Kapillar & Zeit [s] & Viskosität [Pa s]\\\hline
+  grün & $5.54\pm 0.5$ & $0.0011\pm 0.0001$\\
+  braun & $65.26\pm 0.5$&$0.00069\pm 0.00008$\\\hline
+  gew. Mittelwert & & $0.00085\pm 0.00007$\\\hline
+ \end{tabular}
+ \caption{Bestimmung der Viskosität von Wasser bei verschiedenen Kapillaren aus deren jeweiligen Ausflusszeiten für von Markierung 50 bis 45\label{tbl:viskozeit}}
+\end{table}
 
 \subsubsection{Viskosität aus Fließgeschwindigkeit}
 \begin{figure}
@@ -362,11 +374,7 @@ a
 \include{Viskositaet}
 \caption{Messung der Viskosität von Wasser halblogarithmisch aufgetragen\label{fig:viskogerade}}
 \end{figure}
-Die Fehlerfortpflanzung der Viskosität der umgestellten Formel \eqref{eq:eta1} in deren Diskretisierung beträgt
-\begin{align*}
-\sigma_{\eta}=\frac{\pi r^{3}}{8  dV^{2} l^{2}} \sqrt{ dV^{2} l^{2} \left(16 \Delta p^{2} dt^{2} \sigma_{r}^{2} + \Delta p^{2} r^{2} \sigma_{dt}^{2} + dt^{2} r^{2} \sigma_{\Delta p}^{2}\right) +\Delta p^{2}r^{2}dt^{2} \left(dV^{2}   \sigma_{l}^{2} + l^{2} \sigma_{dV}^{2}\right)}
-\end{align*}
-Wodurch sich die Werte und deren Fehler aus Tabelle \ref{tbl:visko2b} ergeben.\\
+Die Fehlerfortpflanzung der Viskosität der umgestellten Formel \eqref{eq:eta1} in deren Diskretisierung ist analog zu Formel \eqref{eq:sigmaeta}, wodurch sich die Werte und deren Fehler aus Tabelle \ref{tbl:visko2b} ergeben.\\
 Aus der Geradensteigung $m$ der gefitteten Daten aus Abb. \ref{fig:viskogerade} berechnet sich mit
 \begin{align}
  \eta=-\frac{\rho g R^4}{8mlr^2}
