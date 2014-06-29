@@ -285,7 +285,7 @@ Abschließend muss alles gesäubert werden und die Arbeitsfläche trocken gewisc
 \section{Auswertung}
 \label{sec:auswertung}
 \subsection{Allgemeines}
-\begin{table}
+\begin{table}[!h]
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline
@@ -317,15 +317,15 @@ Die Fehler der Oberflächenspannung nach Formel \eqref{eq:oberfl} berechnen sich
 \begin{tabular}{|l|l|c|c|}
 \hline
 Flüssigkeit 	     &Kapillar 	& m. Steighöhe [cm]		& Oberflächenspannung [N/m]\\\hline\hline
-								&grün	& $1.45\pm 0.04$		&$ 0.0642 \pm 0.0017 $\\
-Destiliertes Wasser	&blau	& $2.327\pm 0.035$	&$ 0.0696 \pm 0.0013 $\\
-            					&braun	& $3.23\pm 0.04$		&$ 0.0693 \pm 0.0017 $\\\hline
-								&grün	& $0.85\pm 0.04$		&$ 0.0411 \pm 0.0019 $\\
+				&grün	& $1.45\pm 0.04$	&$ 0.0642 \pm 0.0017 $\\
+Destiliertes Wasser		&blau	& $2.327\pm 0.035$	&$ 0.0696 \pm 0.0013 $\\
+            			&braun	& $3.23\pm 0.04$	&$ 0.0693 \pm 0.0017 $\\\hline
+				&grün	& $0.85\pm 0.04$	&$ 0.0411 \pm 0.0019 $\\
 Ethylenglykol			&blau	& $1.383\pm 0.022$	&$ 0.0451 \pm 0.0009 $\\
-								&braun	& $1.98\pm 0.06$		&$ 0.0464 \pm 0.0017 $\\\hline
-								&grün	& $0.517\pm 0.022$	&$ 0.0192 \pm 0.0008 $\\
-Methylalkohol			&blau	& $0.98\pm 0.10$		&$ 0.0247 \pm 0.0024 $\\
-								&braun	& $1.33\pm 0.04$		&$ 0.0240 \pm 0.0009 $\\
+				&braun	& $1.98\pm 0.06$	&$ 0.0464 \pm 0.0017 $\\\hline
+				&grün	& $0.517\pm 0.022$	&$ 0.0192 \pm 0.0008 $\\
+Methylalkohol			&blau	& $0.98\pm 0.10$	&$ 0.0247 \pm 0.0024 $\\
+				&braun	& $1.33\pm 0.04$	&$ 0.0240 \pm 0.0009 $\\
 \hline
 \end{tabular}
 \caption{Steighöhe unterschiedlicher Flüssigkeiten in unterschiedlichen Kapillaren und die sich daraus ergebende Oberflächenspannung}
@@ -337,14 +337,14 @@ Damit kann man mithilfe des gewichteten Mittelwertes die Werte aus Tab. \ref{tab
 \begin{tabular}{|c||c|c|c|}
 \hline
 $\sigma$ 		& Gew. Mittelwert [\si{\newton/\meter}]	& Literaturwert [\si{\newton/\meter}]	& Abweichung\\\hline\hline
-dest. Wasser 	& $ 0.0681 \pm 0.0009 $						&$0.07275$											&7\%	\\\hline 
-Ethylenglykol 	& $ 0.0448 \pm 0.0007 $ 						&$0.0484$											&8\%	\\\hline 
-Methanol 			& $ 0.0215 \pm 0.0006 $						&$0.0226$											&5\%	\\ 
+dest. Wasser 		& $ 0.0681 \pm 0.0009 $			&$0.07275$				&7\%	\\\hline 
+Ethylenglykol 		& $ 0.0448 \pm 0.0007 $ 		&$0.0484$				&8\%	\\\hline 
+Methanol		& $ 0.0215 \pm 0.0006 $			&$0.0226$				&5\%	\\ 
 \hline 
 \end{tabular} 
 \caption{Oberflächenspannung der drei Flüssigkeiten und der Literaturwert nach \protect\footnotemark\label{tab:sigma}}
 \end{table}
-\footnotetext{http://de.wikipedia.org/wiki/Oberflächenspannung}
+\footnotetext{http://de.wikipedia.org/wiki/Oberflächenspannung\#Werte}
 \subsection{Viskosität}
 \begin{figure}
 \centering
@@ -355,7 +355,8 @@ Die Fehlerfortpflanzung der Viskosität beträgt
 \sigma_{\eta}=\frac{\pi r^{3}}{8  \dot{V}^{2} l^{2}} \sqrt{\dot{V}^{2} l^{2} \left(r^{2}  \sigma_{p1}^{2} + r^{2} \sigma_{p2}^{2} + 16  \sigma_{r}^{2} \left(p_{1} - p_{2}\right)^{2}\right) + r^{2}\left(p_{1} - p_{2}\right)^{2}\left(\dot{V}^{2}  \sigma_{l}^{2}  + l^{2} \sigma_{\dot{V}}^{2}\right)}
 \end{align*}
 Daraus ergibt sich nach Formel \eqref{eq:eta} $\eta=(0.00060 \pm 0.00007)\si{\Pa\s}$\\
-Aus Formel \eqref{eq:eta3} ergibt sich $\eta=(0.000714 \pm 0.000027)\si{\Pa\s} $
+Aus Formel \eqref{eq:eta3} ergibt sich $\eta=(0.000714 \pm 0.000027)\si{\Pa\s} $\\
+Der Literaturwert liegt bei Wasser für $25\si{\celsius}$ bei 
 \input{viskotbl.tex}
 \section{Diskussion}
 \label{sec:diskussion}
