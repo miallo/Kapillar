@@ -284,7 +284,7 @@ Abschließend muss alles gesäubert werden und die Arbeitsfläche trocken gewisc
 
 \section{Auswertung}
 \label{sec:auswertung}
-\subsection{Allgemeines}
+\subsection{Dichte der drei Flüssigkeiten}
 \begin{table}[!h]
 \centering
 \begin{tabular}{|l|c|c|c|}
@@ -306,7 +306,7 @@ Um die Dichte von Methylalkohol und Ethylenglykol zu bestimmen, wurde die Mohr's
 \end{tabular}
 \caption{Position der einzelnen Gewichte an der Moor'schen Waage in Skalenteilen bei den unterschiedlichen Flüssigkeiten\label{tab:dichte}}
 \end{table}
-Die Literaturwerte nach \cite[S. 130-131]{Formelsammlung} lauten für Ethylenglykol 1113kg/m$^3$ und für Methanol 790kg/m$^3$.
+Die Literaturwerte nach \cite[S. 130-131]{Formelsammlung} lauten für Ethylenglykol 1113kg/m$^3$ (3\% größer, als unsere Messung) und für Methanol 790kg/m$^3$ (6\% kleiner, als unsere Messung).
 \subsection{Oberflächenspannung}
 Die Fehler der Oberflächenspannung nach Formel \eqref{eq:oberfl} berechnen sich nach
 \begin{align*}
@@ -356,15 +356,21 @@ Die Fehlerfortpflanzung der Viskosität beträgt
 \end{align*}
 Daraus ergibt sich nach Formel \eqref{eq:eta} $\eta=(0.00060 \pm 0.00007)\si{\Pa\s}$\\
 Aus Formel \eqref{eq:eta3} ergibt sich $\eta=(0.000714 \pm 0.000027)\si{\Pa\s} $\\
-Der Literaturwert liegt bei Wasser für $25\si{\celsius}$ bei 
+Der Literaturwert liegt bei Wasser für $\SI{25}{\celsius}$ bei 
 \input{viskotbl.tex}
 \section{Diskussion}
 \label{sec:diskussion}
+Bei der Bestimmung der Dichte mit der Mohr'schen Waage stellten wir fest, dass die Eichung der Waage sich augenscheinlich während der Messung leicht verstellte.
+So haben wir bei den drei Messungen jeweils eine Abweichung nach der Messung von der Gleichgewichtslage gehabt.
+Diese haben wir natürlich vor jeder Messung wiederhergestellt, allerdings können dadurch unsere Messergebnisse der Dichte natürlich verfälscht sein.\\
 Aufgrund von fehlender Zeit schafften wir es leider nicht, die Messung der Ausflusszeit des mittleren Kapillars zu bestimmen.
 Da wir jedoch die Messungen des kleinen und großen Kapillars durchführen konnten, haben wir wenigstens einen Eindruck bekommen, wie die Kapillardicke mit der Ausflussgeschwindigkeit zusammenhängt.\\
 Bei dem zweiten Teilversuch der Viskosität haben wir offensichtlich einen falschen Messwert notiert.
 Schon ein oberflächlicher Blick zeigt hier, dass für die Werte 52.86s, 67.01s, 74.48s, 81.59s und 96.22s die Differenz zum nächsten nicht annähernd ähnlich ist.
-Ohne den Wert von 74.48s zu berücksichtigen, kamen wir auf konsistente Werte und wir schlossen diesen aus, da wir vermuten, einen zusätzlichen Wert für einen halben Skalenschritt hier aufgenommen zu haben.
+Ohne den Wert von 74.48s zu berücksichtigen, kamen wir auf konsistente Werte und wir schlossen diesen aus, da wir vermuten, einen zusätzlichen Wert für einen halben Skalenschritt hier aufgenommen zu haben.\\
+Bei der Suche der Literaturwerte hatten wir teilweise Probleme, geeignete Werte zu finden, da es nur wenige (und zudem nicht besonders vertrauenswürdige) Quellen zur Viskosität gibt, welche zudem höchstens die jeweiligen Werte zu 25\si{\celsius} hatten, was nicht unseren gemessenen $(27.5\pm 1)$\si{\celsius} übereinstimmt.\\\\
+Insgesamt erhielten wir gute Werte mit Abweichungen von den Literaturwerten von unter 10\%.
+Dies ließ sich nur realisieren, da bei der Reinigung der Kapillaren besonders darauf geachtet wurde, Rückstände der Reinigungsmittel möglichst komplett zu entfernen und vor allem Flüssigkeitsblasen in den Kapillaren zu vermeiden, die einen starken Einfluss auf die Messergebnisse (insbesondere der Kapillarität) hätten.
 
 
 \section{Anhang}
