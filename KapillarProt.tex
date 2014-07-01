@@ -291,7 +291,7 @@ Abschließend muss alles gesäubert werden und die Arbeitsfläche trocken gewisc
 \hline
  & Blau & Grün & Braun\\\hline
 Durchmesser [mm]&$1.223\pm 0.014$&$1.811\pm 0.011$&$0.876\pm 0.018$\\\hline
-Länge [cm]&$25.7\pm 0.1$&$ 25.5\pm 0.1$&$0.26\pm 0.1$\\\hline
+Länge [cm]&$25.7\pm 0.1$&$ 25.5\pm 0.1$&$26.0\pm 0.1$\\\hline
 \end{tabular}
 \caption{Abmessungen der drei Kapillaren}
 \end{table}
@@ -346,14 +346,14 @@ Methanol		& $ 0.0215 \pm 0.0006 $			&$0.0226$				&5\%	\\
 \footnotetext{http://de.wikipedia.org/wiki/Oberflächenspannung\#Werte}
 \subsection{Viskosität}
 \subsubsection{Viskosität aus Fließzeit}
-Da uns aus zeitlichen Gründen leider die Messung der mittleren (blauen) Kapillaren unmöglich war, konnten wir nur die Viskosität der großen und der kleinen bestimmen.
-Diese haben wir nach der Formel
+Da uns aus zeitlichen Gründen leider die Messung mit der mittleren (blauen) Kapillaren unmöglich war, konnten wir die Viskosität von destilliertem Wasser nur mittels der großen und der kleinen bestimmen.
+Dazu wird die Formel \eqref{eq:eta1} nach $\eta$ umgestellt und diskretisiert $(\dot{V}\approx \frac{\Delta V}{\Delta t})$. Es ergibt sich diese Formel
 \begin{align}
-	\eta=\frac{\pi \cdot \Delta p \cdot dt \cdot r^{4}}{8 dV~ l}
+	\eta=\frac{\pi \cdot \Delta p \cdot \Delta t \cdot r^{4}}{8 ~ \Delta V~ l}
 \end{align}
 berechnet und deren Fehler ergaben sich durch
 \begin{align}
- \sigma_{\eta}=\frac{\pi r^{3}}{8  dV^{2} l^{2}} \sqrt{ dV^{2} l^{2} \left(16 \Delta p^{2} dt^{2} \sigma_{r}^{2} + \Delta p^{2} r^{2} \sigma_{dt}^{2} + dt^{2} r^{2} \sigma_{\Delta p}^{2}\right) +\Delta p^{2}r^{2}dt^{2} \left(dV^{2}   \sigma_{l}^{2} + l^{2} \sigma_{dV}^{2}\right)}\label{eq:sigmaeta}
+ \sigma_{\eta}=\frac{\pi r^{3}}{8  \Delta V^{2} l^{2}} \sqrt{ \Delta V^{2} l^{2} \left(16 \Delta p^{2} \Delta t^{2} \sigma_{r}^{2} + \Delta p^{2} r^{2} \sigma_{\Delta t}^{2} + \Delta t^{2} r^{2} \sigma_{\Delta p}^{2}\right) +\Delta p^{2}r^{2}\Delta t^{2} \left(\Delta V^{2}   \sigma_{l}^{2} + l^{2} \sigma_{\Delta V}^{2}\right)}\label{eq:sigmaeta}
 \end{align}
 wodurch wir für die beidem Messreihen die Ergebnisse der Tabelle \ref{tbl:viskozeit} erhielten
 \begin{table}[!h]
