@@ -374,14 +374,39 @@ wodurch wir für die beidem Messreihen die Ergebnisse der Tabelle \ref{tbl:visko
 \include{Viskositaet}
 \caption{Messung der Viskosität von Wasser halblogarithmisch aufgetragen\label{fig:viskogerade}}
 \end{figure}
-Die Fehlerfortpflanzung der Viskosität der umgestellten Formel \eqref{eq:eta1} in deren Diskretisierung ist analog zu Formel \eqref{eq:sigmaeta}, wodurch sich die Werte und deren Fehler aus Tabelle \ref{tbl:visko2b} ergeben.\\
-Aus der Geradensteigung $m$ der gefitteten Daten aus Abb. \ref{fig:viskogerade} berechnet sich mit
+Aus Gleichung \ref{eq:eta1} ergibt sich durch die Abhängigkeit des Druckes von der Höhe
+\begin{align*}
+\dot V=\pi R^2~\dot h(t) \qquad \quad
+\Delta p=\rho g~h(t)
+\end{align*}
+Die Lösung der sich ergebenden homogenen Differentialgleichung erster Ordnung mit konstanten Koeffizienten ist:
 \begin{align}
- \eta=-\frac{\rho g R^4}{8mlr^2}
+ h(t)=h_0~ \exp\left(-\frac{\rho g r^4}{8\eta R^2}t\right)
 \end{align}
-ein Wert von $\eta=(0.00060 \pm 0.00007)\si{\Pa\s}$. Die Diskrepanz der beiden Werte der Geradensteigung und der Tabelle \ref{tbl:visko2b} ist dadurch zu erklären, dass bei dem Fit auch der Wert der Zeit $t=74.48$s mit berücksichtigt wurde, den wir aus Tablelle explizit herausgenommen haben (s. Diskussion). Andernfalls käme man auf ein identisches Ergebnis.\\
+Trägt man die Höhe in Abhängigkeit der Zeit logarithmisch auf, so ergibt sich eine Gerade, aus der man mit der Geradensteigung $m$ der gefitteten Daten aus Abb. \ref{fig:viskogerade} $\eta$ berechnen kann:
+\begin{align}
+ \eta=-\frac{\rho g r^4}{8mlR^2}
+\end{align}
+Es ergibt sich ein Wert von $\eta=(0.00060 \pm 0.00007)\si{\Pa\s}$. Die Diskrepanz der beiden Werte der Geradensteigung und der Tabelle \ref{tbl:visko2b} ist dadurch zu erklären, dass bei dem Fit auch der Wert der Zeit $t=74.48$s mit berücksichtigt wurde, den wir aus Tablelle explizit herausgenommen haben (s. Diskussion). Andernfalls käme man auf ein identisches Ergebnis.\\
 Der Literaturwert\footnote{Quelle: www.uni-magdeburg.de/isut/LSS/Lehre/Arbeitsheft/IV.pdf, Seite 1, 22.06.2014, 13 Uhr} der Viskosität von Wasser für $\SI{25}{\celsius}$ liegt bei 0.00089 \si{\Pa\s} was 25\% größer ist, als die Tabellenmesswerte, welche für $(27.5\pm 1)^\circ$C aufgenommen wurden. Allerdings ist nach eben dieser Quelle die Viskosität von Wasser bei $30^\circ$C nurnoch bei 0.000798 \si{\Pa\s}, was nurnoch 12\% größer ist, als unser Wert.
-\begin{table}[!h]
+
+\section{Diskussion}
+\label{sec:diskussion}
+Bei der Bestimmung der Dichte mit der Mohr'schen Waage stellten wir fest, dass die Eichung der Waage sich augenscheinlich während der Messung leicht verstellte.
+So haben wir bei den drei Messungen jeweils eine Abweichung nach der Messung von der Gleichgewichtslage gehabt.
+Diese haben wir natürlich vor jeder Messung wiederhergestellt, allerdings können dadurch unsere Messergebnisse der Dichte natürlich verfälscht sein.\\
+Aufgrund von fehlender Zeit schafften wir es leider nicht, die Messung der Ausflusszeit des mittleren Kapillars zu bestimmen.
+Da wir jedoch die Messungen des kleinen und großen Kapillars durchführen konnten, haben wir wenigstens einen Eindruck bekommen, wie die Kapillardicke mit der Ausflussgeschwindigkeit zusammenhängt.\\
+Bei dem zweiten Teilversuch der Viskosität haben wir offensichtlich einen falschen Messwert notiert.
+Schon ein oberflächlicher Blick zeigt hier, dass für die Werte 52.86s, 67.01s, 74.48s, 81.59s und 96.22s die Differenz zum nächsten nicht annähernd ähnlich ist.
+Ohne den Wert von 74.48s zu berücksichtigen, kamen wir auf konsistente Werte und wir schlossen diesen aus, da wir vermuten, einen zusätzlichen Wert für einen halben Skalenschritt hier aufgenommen zu haben.\\
+Bei der Suche der Literaturwerte hatten wir teilweise Probleme, geeignete Werte zu finden, da es nur wenige (und zudem nicht besonders vertrauenswürdige) Quellen zur Viskosität gibt, welche zudem höchstens die jeweiligen Werte zu 25\si{\celsius} hatten, was nicht unseren gemessenen $(27.5\pm 1)$\si{\celsius} übereinstimmt.\\\\
+Insgesamt erhielten wir bei allen Messungen gute Werte mit Abweichungen von den Literaturwerten von um die 10\%.
+Dies ließ sich nur realisieren, da bei der Reinigung der Kapillaren besonders darauf geachtet wurde, Rückstände der Reinigungsmittel möglichst komplett zu entfernen und vor allem Flüssigkeitsblasen in den Kapillaren zu vermeiden, die einen starken Einfluss auf die Messergebnisse (insbesondere der Kapillarität) hätten.
+
+
+\section{Anhang}
+\begin{table}[!hb]
 \centering
 \begin{tabular}{|l|l|}
  \hline
@@ -412,23 +437,7 @@ gew. Mittelwert & $0.00071 \pm 0.00003$\\
 \end{tabular}
 \caption{Versuch 2b - Messung der Viskosität von Wasser in unterschiedlichen Zeitdifferenzen und deren resultierende Viskosität zusammen mit dem gewichteten Mittelwert\label{tbl:visko2b}}
 \end{table}
-\section{Diskussion}
-\label{sec:diskussion}
-Bei der Bestimmung der Dichte mit der Mohr'schen Waage stellten wir fest, dass die Eichung der Waage sich augenscheinlich während der Messung leicht verstellte.
-So haben wir bei den drei Messungen jeweils eine Abweichung nach der Messung von der Gleichgewichtslage gehabt.
-Diese haben wir natürlich vor jeder Messung wiederhergestellt, allerdings können dadurch unsere Messergebnisse der Dichte natürlich verfälscht sein.\\
-Aufgrund von fehlender Zeit schafften wir es leider nicht, die Messung der Ausflusszeit des mittleren Kapillars zu bestimmen.
-Da wir jedoch die Messungen des kleinen und großen Kapillars durchführen konnten, haben wir wenigstens einen Eindruck bekommen, wie die Kapillardicke mit der Ausflussgeschwindigkeit zusammenhängt.\\
-Bei dem zweiten Teilversuch der Viskosität haben wir offensichtlich einen falschen Messwert notiert.
-Schon ein oberflächlicher Blick zeigt hier, dass für die Werte 52.86s, 67.01s, 74.48s, 81.59s und 96.22s die Differenz zum nächsten nicht annähernd ähnlich ist.
-Ohne den Wert von 74.48s zu berücksichtigen, kamen wir auf konsistente Werte und wir schlossen diesen aus, da wir vermuten, einen zusätzlichen Wert für einen halben Skalenschritt hier aufgenommen zu haben.\\
-Bei der Suche der Literaturwerte hatten wir teilweise Probleme, geeignete Werte zu finden, da es nur wenige (und zudem nicht besonders vertrauenswürdige) Quellen zur Viskosität gibt, welche zudem höchstens die jeweiligen Werte zu 25\si{\celsius} hatten, was nicht unseren gemessenen $(27.5\pm 1)$\si{\celsius} übereinstimmt.\\\\
-Insgesamt erhielten wir bei allen Messungen gute Werte mit Abweichungen von den Literaturwerten von um die 10\%.
-Dies ließ sich nur realisieren, da bei der Reinigung der Kapillaren besonders darauf geachtet wurde, Rückstände der Reinigungsmittel möglichst komplett zu entfernen und vor allem Flüssigkeitsblasen in den Kapillaren zu vermeiden, die einen starken Einfluss auf die Messergebnisse (insbesondere der Kapillarität) hätten.
-
-
-\section{Anhang}
-\begin{thebibliography}{9}
+\begin{thebibliography}{1000}
 
 \bibitem{lp} 
 	\emph{Lehrportal der Universität Göttingen, Kapillarität und Viskosität},
